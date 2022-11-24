@@ -3,11 +3,15 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return "Hello World!"
+
 @app.route('/<name>')
-def hello(name=None):
+def hello_name(name=None):
     if(name):
         return "Hello " + str(name)
-    else
+    else:
         return "Hello World!"
 
 
